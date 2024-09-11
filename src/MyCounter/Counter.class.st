@@ -17,3 +17,13 @@ Counter >> count [
 Counter >> count: aVariable [
    count := aVariable 
 ]
+
+{ #category : 'API' }
+Counter >> decrement [ 
+   count := count - 1
+]
+
+{ #category : 'accessing' }
+Counter >> increment [
+	count := count + 1 
+]
