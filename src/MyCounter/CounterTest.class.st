@@ -32,3 +32,8 @@ CounterTest >> testIncrement [
    c increment .
    self assert: c count equals: 1
 ]
+
+{ #category : 'tests' }
+CounterTest >> testInitialize [
+    self assert: Counter new count equals: 0
+]
