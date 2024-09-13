@@ -10,10 +10,7 @@ Class {
 
 { #category : 'as yet unclassified' }
 Die class >> withFaces: anInteger [ 
-	| instance |
-	instance := self new.
-	instance faces: anInteger. 
-	^ instance 
+	^ self new faces: anInteger ; yourself 
 ]
 
 { #category : 'accessing' }
