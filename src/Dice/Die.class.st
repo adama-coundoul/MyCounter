@@ -8,9 +8,22 @@ Class {
 	#package : 'Dice'
 }
 
+{ #category : 'as yet unclassified' }
+Die class >> withFaces: anInteger [ 
+	| instance |
+	instance := self new.
+	instance faces: anInteger. 
+	^ instance 
+]
+
 { #category : 'accessing' }
 Die >> faces [
 	^ faces
+]
+
+{ #category : 'accessing' }
+Die >> faces: anInteger [
+ 	 faces := anInteger 
 ]
 
 { #category : 'initialization' }
