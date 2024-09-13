@@ -24,3 +24,13 @@ DieHandleTest >> testCreationAdding [
 		yourself.
 	self assert: handle diceNumber equals:2 .
 ]
+
+{ #category : 'tests' }
+DieHandleTest >> testRoll [ 
+	|handle|
+	handle := DieHandle new
+		addDie: (Die withFaces: 10);
+		addDie: (Die withFaces: 6).
+	self assert: (handle roll between: handle diceNumber and: handle sumFaces   )
+	
+]

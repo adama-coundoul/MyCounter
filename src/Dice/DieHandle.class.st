@@ -22,3 +22,20 @@ DieHandle >> diceNumber [
 DieHandle >> initialize [ 
 	dice := OrderedCollection new.
 ]
+
+{ #category : 'as yet unclassified' }
+DieHandle >> roll [ 
+   |n|
+	n := 0.
+	dice do: [:each | n := n + each roll ].
+	^ n 
+	
+]
+
+{ #category : 'as yet unclassified' }
+DieHandle >> sumFaces [ 
+	|n|
+	n := 0.
+	dice do: [:each | n := n + each faces ].
+	^ n 
+]
