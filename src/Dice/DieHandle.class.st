@@ -8,9 +8,25 @@ Class {
 	#package : 'Dice'
 }
 
+{ #category : 'arithmetic' }
+DieHandle >> + aDieHandle [ 
+	|aNewHandle|
+	aNewHandle := self class new.
+	dice do: [:each | aNewHandle addDie:each ].
+	(aDieHandle dice) do: [ :each | aNewHandle addDie:each ].
+	^ aNewHandle 
+	
+	
+]
+
 { #category : 'adding' }
 DieHandle >> addDie: aDie [ 
 	dice add: aDie 
+]
+
+{ #category : 'accessing' }
+DieHandle >> dice [ 
+	^ dice 
 ]
 
 { #category : 'as yet unclassified' }
